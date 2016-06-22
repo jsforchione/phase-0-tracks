@@ -9,4 +9,4 @@ A branch is a copy of your entire repo. A master branch is the clean version of 
 * What is a commit? What makes a good commit message?
 A commit is a save point. A good commit message is one that is specific, yet concise.
 * What is a merge conflict?
-A merge conflict is when there is code that does not match on the branches you are merging. To fix this you go into the branches and delete the code that you do not want, or write new code. 
+A merge conflict is when there is code that does not match on the branches you are merging. To fix this you go into the branches and delete the code that you do not want, and/or write new code. 
