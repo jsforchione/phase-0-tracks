@@ -12,11 +12,11 @@ cite {
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
-  width: 200px;
+  min-width: 20%;
 }
 
 #main {
-  width: 756px;
+  width: 50%;
 }
 
 .align {
@@ -25,7 +25,7 @@ cite {
 }
 
 body {
-  width: 960px;
+  max-width: 960px;
 }
 
 img {
@@ -40,4 +40,22 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #external-links {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
 }
