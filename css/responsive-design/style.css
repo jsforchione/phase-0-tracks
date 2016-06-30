@@ -12,11 +12,22 @@ cite {
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
+  width: 200px;
 }
 
-/* you're welcome to edit the
-image, figure, and figcaption CSS if you'd like, 
-but it's optional! */
+#main {
+  width: 756px;
+}
+
+.align {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body {
+  width: 960px;
+}
+
 img {
   width: 100%;
 }
