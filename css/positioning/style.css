@@ -2,11 +2,34 @@ img {
 	margin-top: 10px;
 	margin-right: 500px;
 	margin-left: 500px;
-	z-index: 0;
+	position: relative;
 }
+
 div {
-	margin-top: 20px;
-	margin-right: 500px;
-	margin-left: 500px;
-	z-index: 1;
+	width: 100%;
+}
+
+p {
+	width: 100%;
+}
+
+#hat {
+    z-index: 2;
+    display: block;
+    margin: 0 auto;
+    top: 118px;
+    left: 14px;
+}
+
+#glasses {
+    z-index: 3;
+    display: block;
+    margin: 0 auto;
+    top: 342px;
+}
+
+#octopus {
+	z-index: 0;
+	display: block;
+	margin: 0 auto;
 }
