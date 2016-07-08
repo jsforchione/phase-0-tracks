@@ -1,0 +1,17 @@
+I would give my robot an array of numbers that corresponded to the floors that I wanted him to go to in order from first to last.
+- Walk into the elevator and face the rows of buttons with numbers on them
+-access the array and find the button with the corresponding number in the array
+-press the button that matches the number
+-do not get out of the elevator until the floor number matches the number in the array/the button you pressed
+-go ahead and delete this number from the array once you have reached the corresponding floor
+-continue your tasks/go to the corresponding floors until the array is empty
+-once the array is empty go back into the elevator and press the button with a * next to it, which will bring you to the main bottom floor
+-return home
+
+Walking the dog:
+I would hand the robot a hash of key/value pairs that would consist of a direction as the key, and the mileage as the value. It would look something like this:
+dog_walk = { "North" => 1, "West" => .05, "South" => 1, "East" => .05}
+-start out going North for 1 mile, once you hit a mile go West for .05 miles, once you have reached half a mile go South for 1 mile, then go East for .05 miles and at the completion of this you will return back to the front door (it is a complete rectangle).
+
+
+
