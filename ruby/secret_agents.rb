@@ -31,3 +31,7 @@ def decrypt(password)
     end
     return password
 end
+#decrypt(encrypt("swordfish"))
+# this nested method works because the encrypt variables are 
+#local variables declared within the encrypt method and called 
+#again using the decrypt method
