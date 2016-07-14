@@ -1,16 +1,4 @@
 
-def name(password)
-  puts "Would you like to encrypt or decrypt your password"
-  input = gets.chomp
-  puts "What is the password?"
-  password = gets.chomp
-    if input == "encrypt"
-      return encrypt(password)
-    else 
-      return decrypt(password)
-    end
-end
-
 def encrypt(password)
 index=0
 
@@ -46,6 +34,20 @@ def decrypt(password)
     end
     return password
 end
+
+
+def name(password)
+  puts "Would you like to encrypt or decrypt your password"
+  input = gets.chomp
+  puts "What is the password?"
+  password = gets.chomp
+    if input == "encrypt"
+      return encrypt(password)
+    else 
+      return decrypt(password)
+    end
+end
+
 
 #decrypt(encrypt("swordfish"))
 # this nested method works because the encrypt variables are 
