@@ -1,3 +1,4 @@
+
 def name(password)
   puts "Would you like to encrypt or decrypt your password"
   input = gets.chomp
@@ -45,7 +46,13 @@ def decrypt(password)
     end
     return password
 end
+
 #decrypt(encrypt("swordfish"))
 # this nested method works because the encrypt variables are 
 #local variables declared within the encrypt method and called 
+<<<<<<< HEAD:ruby/secret-agents.rb
 #again using the decrypt method
+=======
+#again using the decrypt method
+
+>>>>>>> master:ruby/secret_agents.rb
