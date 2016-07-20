@@ -22,15 +22,16 @@ def fake_name(real_name)
         j = 0
         while j < vowels.length
             if characters[i] == vowels[j]
-                characters[i] = vowels[j].next
-            else
-                characters[i] = characters[i].next
+                characters[i] = vowels[j + 1]
+                break
             end
             j += 1
         end
+        if characters[i] != vowels[j]
+            characters[i] = characters[i].next
+        end
         i += 1
     end
-
+    
     p characters.join("")
-
 end    
