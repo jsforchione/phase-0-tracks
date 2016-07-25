@@ -28,23 +28,23 @@ def designer
   updated_key = gets.chomp
   if updated_key == "none"
   	#dont think yield is correct but break didn't work
-    yield
+    return client
   else 
   	puts "What do you want to change the value to?"
     new_value = gets.chomp
     updated_key.to_sym
-  end
-  #these aren't updating the keys in the orginal hash 
-  if updated_key == :name
-    client_name == new_value
-  elsif updated_key == :age
-    age = new_value
-  elsif updated_key == :children
-    children = new_value
-  elsif updated_key == :decor
-    decor = new_value
-  else 
-    succulents = new_value
+  
+    if updated_key == "name"
+      client[:name] = new_value
+    elsif updated_key == "age"
+      client[:age] = new_value
+    elsif updated_key == "children"
+      client[:children] = new_value
+    elsif updated_key == "decor"
+      client[:decor] = new_value
+    else 
+      client[:succulents] = new_value
+    end
   end
 
   p client
