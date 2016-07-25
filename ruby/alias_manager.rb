@@ -1,3 +1,9 @@
+# Pseudocode
+# enter_name defines a new array and then runs fake_name 
+# until the user types in quit. If the user does not type
+# in the word quit, thenre-run the function adding in the
+# name the user types and the fake name from fake_name helper
+# function
 def enter_name
     name_array = []
     keep_running = true
@@ -13,7 +19,13 @@ def enter_name
     end
     return name_array
 end
-
+# Pseudocode
+# fake_name downcases and splits the user input to characters and stores
+# the param into a new var swapped_names. Then set two new arrays that contain all
+# vowels or consonants. Then loop through all characters in swapped_names
+# and check if it contains vowles or consonants. Depending what the letter is,
+# increment the letter to the next letter. Then return the generated fake_name
+# after the loop
 def fake_name(real_name)
     real_name.downcase!
     names = real_name.split(" ")
