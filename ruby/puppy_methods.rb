@@ -21,9 +21,13 @@ class Puppy
     dog_years = human_years.to_i*7
     dog_years
   end
-#add one more trick
+
   def initialize
     puts "Initializing new puppy instance ..."
+  end
+
+  def wag
+    puts "*wags tail*"
   end
 
 end
@@ -48,14 +52,20 @@ class Cat
     cat_years
   end
 
-  #def fifty_instances(name)
-    #names = name
-    #i = 0
-    #while i < 50
-        #names = Cat.new
-        #puts names
-        #i += 1
-    #end
-  #end
+  def fifty_instances(name)
+    instances = []
+    i = 0
+    while i < 50
+        new_cat = Cat.new
+        instances.push(new_cat)
+        i += 1
+    end
+    p instances.inspect
+
+    instances.each do |i|
+        new_cat.speak(5)
+        puts new_cat.cat_years(3)
+    end
+  end
 end
 salem = Cat.new
