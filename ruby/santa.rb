@@ -14,6 +14,29 @@ class Santa
         @age = 0
         p "Initializing Santa instance ..."
     end
+
+    def celebrate_birthday
+        @age = 1
+    end
+
+    def get_mad_at(name)
+        last = name
+        @reindeer_ranking.delete(name)
+        @reindeer_ranking[-1] = last
+        p @reindeer_ranking
+    end
+
+    def gender=(new_gender)
+        @gender = new_gender
+    end
+
+    def age
+        return @age
+    end
+
+    def ethnicity
+        return @ethnicity
+    end
 end
 #kris_kringle = Santa.new
 #kris_kringle.speak
@@ -23,3 +46,14 @@ ex_ethnicities = ["Unicorn-icopia", "Polynesian", "Latino", "Indian"]
 ex_genders.length.times do |i|
   santas << Santa.new(ex_genders[i], ex_ethnicities[i])
 end
+kris_kringle = Santa.new("male", "black")
+
+kris_kringle.ethnicity
+
+kris_kringle.get_mad_at("Rudolph")
+
+kris_kringle.gender=("unknown")
+
+kris_kringle.age
+
+kris_kringle.celebrate_birthday
