@@ -1,11 +1,6 @@
 class Santa
-    def speak
-        p "Ho, ho ho! Haaaappy holidays!"
-    end
-
-    def eat_milk_and_cookies(cookie_type)
-        p "That was a good #{cookie_type}"
-    end
+    attr_reader :ethnicity
+    attr_accessor :gender, :age
 
     def initialize(gender, ethnicity)
         @gender = gender
@@ -26,34 +21,49 @@ class Santa
         p @reindeer_ranking
     end
 
-    def gender=(new_gender)
-        @gender = new_gender
+    #def gender=(new_gender)
+        #@gender = new_gender
+    #end
+
+    #def age
+        #return @age
+    #end
+
+    #def ethnicity
+        #return @ethnicity
+    #end
+
+    def speak
+        p "Ho, ho ho! Haaaappy holidays!"
     end
 
-    def age
-        return @age
+    def eat_milk_and_cookies(cookie_type)
+        p "That was a good #{cookie_type}"
     end
-
-    def ethnicity
-        return @ethnicity
-    end
+    
 end
 #kris_kringle = Santa.new
 #kris_kringle.speak
+#santas = []
+#ex_genders = ["N/A", "bigender", "female", "male"]
+#ex_ethnicities = ["Unicorn-icopia", "Polynesian", "Latino", "Indian"]
+#ex_genders.length.times do |i|
+  #santas << Santa.new(ex_genders[i], ex_ethnicities[i])
+#end
+
+#kris_kringle = Santa.new("male", "black")
+#kris_kringle.ethnicity
+#kris_kringle.get_mad_at("Rudolph")
+#kris_kringle.gender=("unknown")
+#kris_kringle.celebrate_birthday
 santas = []
-ex_genders = ["N/A", "bigender", "female", "male"]
-ex_ethnicities = ["Unicorn-icopia", "Polynesian", "Latino", "Indian"]
-ex_genders.length.times do |i|
-  santas << Santa.new(ex_genders[i], ex_ethnicities[i])
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_genders.length.times do |i|
+  santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
-kris_kringle = Santa.new("male", "black")
 
-kris_kringle.ethnicity
+lots_of_santas = []
+puts (100.times { lots_of_santas << Santa.new(example_genders.sample, example_ethnicities.sample) })
+#need to figure out how to do random age from 0-140
 
-kris_kringle.get_mad_at("Rudolph")
-
-kris_kringle.gender=("unknown")
-
-kris_kringle.age
-
-kris_kringle.celebrate_birthday
