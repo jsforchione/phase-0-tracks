@@ -128,3 +128,26 @@ update_item(refactored_list, "peaches", 10)
 p refactored_list 
 remove_item(refactored_list, "honey")
 p refactored_list
+
+# Release 5:
+# Reflect:
+# I learned that the more specific the pseudocode the better, 
+# it really helps you not loose sight of the piece of code you're working on.
+
+# We only used hashes for this, since we needed key/value pairs to store the 
+# quantities of the list. I'm more familiar with arrays, but I don't think they would be 
+# very useful for this since you need specific quantities matched with specific keys. Unless
+# there was only a single item each time in the list, with no specific quantities. 
+
+# A method will return what you tell it to return. In ruby it implicitly returns the last line
+# of code, so you don't even need the return keyword. 
+
+# You can pass arrays, hashes, strings, integers, etc. into methods as arguments. 
+
+# You can pass information between methods that are not within a class by, setting a variable
+# equal to the return value of a method and then calling upon that variable within another method.
+
+# Hashes got a lot more solidified for me, which is really great. How to add items to a hash,
+# how to delete items, how to update items, etc. 
+
+
