@@ -86,16 +86,16 @@ class GuessingGame
 end
 
 # user interface
-# puts "Welcome to the Guessing Game!"
+ puts "Welcome to the Guessing Game!"
 
 
-# puts "What is the secret word you want someone to guess?"
-# word = gets.chomp.downcase
-# game = GuessingGame.new(word)
+ puts "What is the secret word you want someone to guess?"
+ word = gets.chomp.downcase
+ game = GuessingGame.new(word)
 
-# while !game.is_over
-#     puts "Please guess a letter."
-#     letter = gets.chomp.downcase
-#     game.guess(letter)
-# end
+ while !game.is_over
+     puts "Please guess a letter."
+     letter = gets.chomp.downcase
+     game.guess(letter)
+ end
 
