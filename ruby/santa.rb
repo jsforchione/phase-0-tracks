@@ -21,6 +21,10 @@ class Santa
         p @reindeer_ranking
     end
 
+    def set_age
+        @age = Random.new.rand(0..140)
+    end
+
     #def gender=(new_gender)
         #@gender = new_gender
     #end
@@ -60,10 +64,18 @@ santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
+  santa = Santa.new(example_genders[i], example_ethnicities[i])
+  santa.set_age
+  santas << santa
 end
 
 lots_of_santas = []
-puts (100.times { lots_of_santas << Santa.new(example_genders.sample, example_ethnicities.sample) })
-#need to figure out how to do random age from 0-140
-
+puts (100.times { 
+   
+    santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+    santa.set_age
+    puts santa.age
+    puts santa.gender
+    puts santa.ethnicity
+    lots_of_santas << santa
+})
