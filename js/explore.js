@@ -6,8 +6,8 @@
 // keep adding the letters at i to the beginning of the variable
 
 function reverse(str) {
-    var reversedString = ""
-    var isOne = true
+    var reversedString = "";
+    var isOne = true;
     if (isOne) {
         console.log(reversedString);
     } else {
