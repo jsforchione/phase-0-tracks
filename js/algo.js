@@ -1,21 +1,20 @@
-//Release 0:
 
+// Release 0:
 function longest(arr) {
-//var arrString = arr.toString()
-//var str = arrString.split(",")
-var lngth = 0;
-var longestString;
+
+var longestString = null;
     for (var i = 0; i < arr.length; i++) {
-        if (arr[i].length > lngth) {
-            var lngth = arr[i].length;
+        if (arr[i].length > 0) {
             longestString = arr[i];
+            for (var j = 1; j < arr.length; j++) {
+                if (arr[j] > arr[i]) {
+                    longestString = arr[j];
+                }
+            }
         }
     }
-    console.log(longestString)
+    console.log(longestString);
 }
-var longArr = [];
-longArr = longest("long phrase","longest phrase","longer phrase");
-return longArr;
 
-//Release 1:
+
 
