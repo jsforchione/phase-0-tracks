@@ -22,13 +22,23 @@ function compare(obj1, obj2) {
 }
 
 // Release 2:
-
-
-
-
-
-
-
+function randomWord(int) {
+    var array = [];
+    var string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    var random = Math.floor((Math.random() * 10) + 1);
+    for(var i=0;i<int;i++) {
+        for(var j = 0; j<int;j++) {
+            if (j ==0) {
+                array[i] = string.charAt(Math.floor(Math.random() * random));
+            } else {
+                array[j] = array[j] + string.charAt(Math.floor(Math.random() * random));
+            }
+            
+        }
+        
+    }
+    return array
+}
 
 // Driver Code:
 a = ["long phrase","longest phrase","longer phrase"];
@@ -53,3 +63,9 @@ Object.keys(obj1) . every(k1 =>
         obj1[k1] === obj2[k2]
     )
 );
+
+for(var i=0; i<10;i++) {
+    var longArray = randomWord(5)
+    console.log(longArray)
+    longest(longArray)
+}
