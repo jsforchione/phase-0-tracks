@@ -1,0 +1,24 @@
+1. Joining 3 tables:
+
+SELECT * FROM businesses, reviews, users WHERE businesses.id = reviews.business_id AND users.id = reviews.user_id;
+
+output: 
+3|The Beagle Nightclub|1|5|amazing beagles|3|4|4|Steven|Wonder
+2|Amir's Towing|2|2|this place overcharges|2|3|3|Angela|Jolie
+1|Grundy Hollow Wedding Chapel|3|4|great venue|1|1|1|Bradford|Pitt
+
+2. Get rid of repetitive columns:
+
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users JOIN reviews ON users.id = reviews.user_id JOIN businesses ON businesses.id = reviews.business_id;
+
+Output:
+Steven|Wonder|The Beagle Nightclub|5|amazing beagles
+Angela|Jolie|Amir's Towing|2|this place overcharges
+Bradford|Pitt|Grundy Hollow Wedding Chapel|4|great venue
+
+3. Viewing the data of all three tables for one business:
+
+SELECT * FROM users JOIN reviews ON users.id = reviews.user_id JOIN businesses ON businesses.id = reviews.business_id WHERE businesses.id=3;
+
+Output:
+4|Steven|Wonder|1|5|amazing beagles|3|4|3|The Beagle Nightclub
