@@ -1,0 +1,30 @@
+1. SELECT * FROM wines;
+output: 1|Ravenswood Zin|2013|false|1
+	2|Robert Mondavi Chardonnay|2013|true|2
+	3|Cline Pinot Noir|2014|false|1
+	4|Stag’s Leap Viognier|2015|true|2
+	5|Buena Vista Cabernet Sauvignon|2013|false|1
+	6|Buena Vista Chardonnay|2014|true|1
+	7|Artesa Grand Reserve Brut|2015|true|2
+
+2. UPDATE wines SET year=2016 WHERE name=“Artesa Grand Reserve Brut”;
+
+3. SELECT * FROM wines, regions WHERE wines.region_id = regions.id;
+output: 1|Ravenswood Zin|2013|false|1|1|Sonoma
+	2|Robert Mondavi Chardonnay|2013|true|2|2|Napa
+	3|Cline Pinot Noir|2014|false|1|1|Sonoma
+	4|Stag’s Leap Viognier|2015|true|2|2|Napa
+	5|Buena Vista Cabernet Sauvignon|2013|false|1|1|Sonoma
+	6|Buena Vista Chardonnay|2014|true|1|1|Sonoma
+	7|Artesa Grand Reserve Brut|2015|true|2|2|Napa
+
+4. SELECT wines.name, regions.region_name FROM wines JOIN regions ON wines.region_id = regions.id;
+output: Ravenswood Zin|Sonoma
+	Robert Mondavi Chardonnay|Napa
+	Cline Pinot Noir|Sonoma
+	Stag’s Leap Viognier|Napa
+	Buena Vista Cabernet Sauvignon|Sonoma
+	Buena Vista Chardonnay|Sonoma
+	Artesa Grand Reserve Brut|Napa
+
+5. DELETE FROM wines WHERE name=“Buena Vista Chardonnay”;
