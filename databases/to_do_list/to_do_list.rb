@@ -3,11 +3,12 @@ require sqlite3
 
 db = sqlite3::Database.new("list.db")
 
-create_table_cmd = <<-SQL 
-    CREATE TABLE lists (
+create_list_table_cmd = <<-SQL 
+    CREATE TABLE IF NOT EXISTS list (
         id INTEGER PRIMARY KEY,
         task VARCHAR(255),
-        date_needed VARCHAR(255)
+        date_needed VARCHAR(255),
+        notes VARCHAR(255)
         )
     SQL
 # could use DATE instead of VARCHAR but formatting must be accurate, and it's long, might be 
@@ -15,6 +16,6 @@ create_table_cmd = <<-SQL
 
 db.execute(create_table_cmd)
 
-db.execute("INSERT INTO lists (task, date_needed) VALUES ("buy foam roller", "ASAP")")
-
-
+def add_task(task, date_needed, notes)
+    db.execute("INSERT INTO list (task, date_needed, notes) VALUES ("buy foam roller", "ASAP")")
+end
