@@ -10,8 +10,8 @@ create_list_table_cmd = <<-SQL
         notes VARCHAR(255)
         )
     SQL
-# could use DATE instead of VARCHAR but formatting must be accurate, and it's long, might be 
-# easier to use varchar for now 
+# could use DATE instead of VARCHAR but formatting must be accurate (i.e. yyyy-mm-dd), which is long, might be 
+# easier to use varchar for now to allow for today/tomorrrow/ASAP
 
 db.execute(create_list_table_cmd)
 # adds task to your to do list
@@ -35,6 +35,14 @@ def display_tasks(db)
         puts "ID: #{item[0]} To do: #{item[1]} Due: #{item[2]} Notes: #{item[3]}"
     end
 end
+# help method to show list of available commands 
+def help
+    puts "To add a task, type 'add task'."
+    puts "To update a task, type 'update'."
+    puts "To delete a task, type 'complete'."
+    puts "To view the To Do List, type 'view'."
+    puts "To quit, type 'done'."
+end
 
 #tester code
 #add_task(db, "buy foam roller", "ASAP", "buy on amazon? if not buy at gym")
@@ -51,14 +59,13 @@ end
 #display_tasks(db)
 
 # USER INTERFACE
-puts "Welcome to your To Do List! Please enter 'add task' to add to your To Do List. 
-Or type 'view' to see your full To Do List. If you would like to update a task, type 'update', 
-or if you've completed an item and would like to remove it from you list, type 'complete'.
-When done, type 'done'."
+puts "Welcome to your To Do List! Please type 'help' to see all available commands."
 done = false
 while done == false do 
     input = gets.chomp
-    if input == "add task"
+    if input == "help"
+        help
+    elsif input == "add task"
         puts "What is the task you would like to add?"
         task = gets.chomp
         puts "When is this task due by?"
