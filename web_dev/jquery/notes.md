@@ -25,4 +25,7 @@ $(document).ready(function(){
 });
 
 
+W3schools is really interactive, I think when it comes to programming, I learn best by actually doing. Reading is great too, and it definitely is helpful for background information before you jump right in. But I realized I was starting to go down a rabbit hole while reading up on jquery, but then started to realize I still couldn't produce any jquery myself. What really helped was the interactive portion that w3schools provided. Being able to see the raw code and how it translates is the most useful form of learning for myself. 
+
+
 
