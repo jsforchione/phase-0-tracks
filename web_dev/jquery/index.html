@@ -2,9 +2,47 @@
 <html>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <title>My Title</title>
+    <script>
+        $(document).ready(function(){
+            $("#btn2").click(function(){
+                $("p").hide();
+        });
+            $("#btn1").click(function(){
+            $("h2").append("A superfood contains high levels of vitamins and minerals. They also can be a great source of antioxidants.");
+        });
+            $("#btn1").click(function(){
+                $("#acai").fadeIn(3000);
+        });
+    });
+    </script>
+    <title>Superfoods!</title>
 </head>
 <body>
+    <h1>The Power of Superfoods!</h1>
+    <h2>
+        What is a Superfood? 
+        <button id="btn1">Click here to find out!</button>
+            
+    </h2>
+    <p>
+        I love nourishing my body with food that I know is improving my health and overall wellbeing. I feel good when I eat good, and wanted to share my knowledge on my favorite superfoods (while simulateously practicing jquery ;) ).
+    </p>
+    <ul>
+        <li>Acai - high in antioxidants!</li>
+        <li>Cacao - contains flavanoids which helps lower blood pressure!</li>
+        <li>Chia Seeds - packed with omega-3s, fiber, and calcium!</li>
+        <li>Hemp Seeds - high in protein and contain all the essential amino acids needed for growth and repair!</li>
+        <li>Spirulina - an algae that is high in protein and an excellent source of vitamins!</li>
+        <li>Spinach or Kale - lots and lots of vitamins and minerals!</li>
+    </ul>
+    <p>
+        The best part about superfoods is that they're super easy to incorporate into your diet. I eat pretty much all of what's on the list above daily. I put spinach, kale, or spirulina into smoothies (I don't love salads) and you can't even taste the difference. I put cacao in my smoothies, and they instantly tast like chocolate milkshakes, but it's good for you! I top my oatmeal with chia and hemp seeds as an added boost of protein and healthy fats. And I make acai bowls and top with lots of fruit and granola.
+    </p>
+
+    <button id="btn2">Click here to hide the paragraphs and just get the cold hard facts!</button>
+    <div>
+    <img id="acai" src="http://static.squarespace.com/static/519e9295e4b046d94a963169/519e9295e4b046d94a96317a/519ed9c5e4b0a14ac5eaa6d5/1369366700900/IMG_8208-1995458685-O.jpg?format=1500w" width="868" height="578"></img>
+</div>
 
 </body>
 </html>
